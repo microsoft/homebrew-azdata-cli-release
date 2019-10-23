@@ -1,1 +1,7 @@
-TODO: Create a file called LICENSE (not LICENSE.TXT, LICENSE.md, etc.)…
+# Formulae `azdata`
+
+The Homebrew package manager formulae for `azdata-cli`.
+
+## Install
+
+`brew update && brew install microsoft/homebrew-azdata-cli-release`
