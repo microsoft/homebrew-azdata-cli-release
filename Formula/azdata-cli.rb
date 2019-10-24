@@ -7,6 +7,11 @@ class AzdataCli < Formula
   version "15.0.2070"
   sha256 "29a6579627d7d3363d8f6b49a85d9c8791ac83bab3ac81e6ebb7b233cb8e6712"
 
+  bottle do
+    cellar :any
+    sha256 "c9860a1813e323a8d16a4b02618ba55bf46e020a87fa227b960402c579e85920" => :mojave
+  end
+  
   depends_on "openssl@1.1"
   depends_on "python"
   depends_on "zeromq"
