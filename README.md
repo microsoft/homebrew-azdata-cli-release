@@ -4,4 +4,8 @@ The Homebrew package manager formulae for `azdata-cli`.
 
 ## Install
 
-`brew update && brew install microsoft/homebrew-azdata-cli-release`
+```bash
+brew tap microsoft/azdata-cli-release
+brew update
+brew install azdata
+```
