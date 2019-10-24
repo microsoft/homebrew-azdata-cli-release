@@ -1,6 +1,5 @@
 # Formulae `azdata`
-
-The Homebrew package manager formulae for `azdata-cli`.
+The Mac homebrew tap for maintaining a stable work environment for [azdata-cli](https://docs.microsoft.com/en-us/sql/big-data-cluster/reference-azdata)
 
 ## Install
 
