@@ -3,12 +3,12 @@ class AzdataCli < Formula
 
   desc "Microsoft Azdata CLI"
   homepage "https://docs.microsoft.com/en-us/sql/big-data-cluster/reference-azdata"
-  url "https://github.com/Microsoft/homebrew-azdata-cli-release/releases/download/15.0.2070/azdata-cli-15.0.2070.tar.gz"
+  url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/15.0.2070/azdata-cli-15.0.2070.tar.gz"
   version "15.0.2070"
   sha256 "84aad04d8aa1f8efb1efce361646b13bd73e37c1377270f6920d31a720fe1ea8"
 
   bottle do
-     root_url "https://github.com/Microsoft/homebrew-azdata-cli-release/releases/download/15.0.2070"  
+     root_url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/15.0.2070"  
      cellar :any
      sha256 "2da9a4ba05f137890335c3b0323e5febf54fefff0a456ecee0f081c2b155ebea" => :mojave
   end
@@ -385,7 +385,7 @@ class AzdataCli < Formula
   end
 
   resource "mssql-cli" do
-    url "https://github.com/Microsoft/homebrew-azdata-cli-release/releases/download/15.0.2070/mssql-cli-0.17.0.tar.gz"
+    url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/15.0.2070/mssql-cli-0.17.0.tar.gz"
     sha256 "c71afd3dec1782f21a2a6c7df41565d5608dade6772bc0aa92fd87644e4c8ae2"
   end
 
