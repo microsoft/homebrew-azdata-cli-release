@@ -8,7 +8,7 @@ class AzdataCli < Formula
   sha256 "6ec7e39df8a928dcb41823c9bb5d7129bc5c4f60860afd9fc07109e2ae2cdd71"
 
   bottle do
-    root_url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/15.0.4013"
+    root_url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/15.0.4023"
     cellar :any
     sha256 "3b4b48fa1cde8ebfb35a17bbd472b47be6e7c40af520b73a9b95005f6a237aaa" => :catalina
     sha256 "8f1da28ed0de76d02a6c4fd020b5ebe406947dd291788089d9c9b4a14f490fd6" => :mojave
