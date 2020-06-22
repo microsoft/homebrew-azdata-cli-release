@@ -3,7 +3,7 @@ class AzdataCli < Formula
 
   desc "Microsoft Azdata CLI"
   homepage "https://docs.microsoft.com/en-us/sql/big-data-cluster/reference-azdata"
-  url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/20.0.03/azdata-cli.tar.gz"
+  url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/20.0.0/azdata-cli.tar.gz"
   version "20.0.0"
   sha256 "f4c9a5436a14d29d2681f5796af26c40427ef2b5fbae6526804df597e37f2180"
 
