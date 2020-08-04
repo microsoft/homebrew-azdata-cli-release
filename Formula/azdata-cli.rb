@@ -3,17 +3,17 @@ class AzdataCli < Formula
 
   desc "Microsoft Azdata CLI"
   homepage "https://docs.microsoft.com/en-us/sql/big-data-cluster/reference-azdata"
-  url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/20.0.0/azdata-cli.tar.gz"
-  version "20.0.0"
-  sha256 "a8fe18d5aff1431f8dbdfc40b21d74ccc5e7890e60467eb809ffcdd5eba264af"
+  url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/20.0.1/azdata-cli.tar.gz"
+  version "20.0.1"
+  sha256 "85dbd2a0863f36da7cf89cfbceaf0c13249ad2dfe20a92ed3f05397a56ab4490"
 
   bottle do
-    root_url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/20.0.0"
+    root_url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/20.0.1"
     cellar :any
-    sha256 "79cf27b0e6d1bea9e2e2e8cff5dc2cf71ad70202c65eec814e500d34e102cfab" => :catalina
-    sha256 "1f169b66b485331c5ce05ec33addaf6e1108b9dda703a5e088a1fa47e697d7b2" => :mojave
+    sha256 "5f4ccb1a993999362f9fb2ab110e1484ff969aef1f8b1774285e255c343ceab8" => :catalina
+    sha256 "b6ba4b4a13a01397cb1624f469b7c355509becbb067c112d389aab3ea9bc8d53" => :mojave
   end
-  
+
   depends_on "freetds"
   depends_on "openssl@1.1"
   depends_on "python@3.8"
@@ -35,39 +35,9 @@ class AzdataCli < Formula
     sha256 "60001cc07d707fe247c94f74ca6ac0d3255aabcb930529690897ca2a39db28b2"
   end
 
-  resource "prometheus-client" do
-    url "https://files.pythonhosted.org/packages/d4/e4/04c85d441194059e063e866847c04dbba11b9428bee8d3b8d086fb9a8c51/prometheus_client-0.8.0.tar.gz"
-    sha256 "c6e6b706833a6bd1fd51711299edee907857be10ece535126a158f911ee80915"
-  end
-
-  resource "tornado" do
-    url "https://files.pythonhosted.org/packages/95/84/119a46d494f008969bf0c775cb2c6b3579d3c4cc1bb1b41a022aa93ee242/tornado-6.0.4.tar.gz"
-    sha256 "0fe2d45ba43b00a41cd73f8be321a44936dc1aba233dee979f17a042b83eb6dc"
-  end
-
-  resource "nbformat" do
-    url "https://files.pythonhosted.org/packages/95/8e/8ffd07ed059a6277fe2f72d1fa411b49a8e512ad62f2ed20b9c2438192dd/nbformat-5.0.7.tar.gz"
-    sha256 "54d4d6354835a936bad7e8182dcd003ca3dc0cedfee5a306090e04854343b340"
-  end
-
-  resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/86/08/e5fc492317cc9d65b32d161c6014d733e8ab20b5e78e73eca63f53b17004/pyzmq-19.0.1.tar.gz"
-    sha256 "13a5638ab24d628a6ade8f794195e1a1acd573496c3b85af2f1183603b7bf5e0"
-  end
-
-  resource "traitlets" do
-    url "https://files.pythonhosted.org/packages/75/b0/43deb021bc943f18f07cbe3dac1d681626a48997b7ffa1e7fb14ef922b21/traitlets-4.3.3.tar.gz"
-    sha256 "d023ee369ddd2763310e4c3eae1ff649689440d4ae59d7485eb4cfbbe3e359f7"
-  end
-
-  resource "jupyter-client" do
-    url "https://files.pythonhosted.org/packages/19/aa/a4b27bb6cdfe870cf56bc5821e9fa54afd80164dc2344fd47194a987f0e9/jupyter_client-6.1.6.tar.gz"
-    sha256 "b360f8d4638bc577a4656e93f86298db755f915098dc763f6fc05da0c5d7a595"
-  end
-
-  resource "terminado" do
-    url "https://files.pythonhosted.org/packages/13/5b/57e995382718d176aba6168632bd15cf5371a7b1205c83a7e4aae0bc6c2e/terminado-0.8.3.tar.gz"
-    sha256 "4804a774f802306a7d9af7322193c5390f1da0abb429e082a10ef1d46e6fb2c2"
+  resource "ipython_genutils" do
+    url "https://files.pythonhosted.org/packages/e8/69/fbeffffc05236398ebfcfb512b6d2511c622871dca1746361006da310399/ipython_genutils-0.2.0.tar.gz"
+    sha256 "eb2e116e75ecef9d4d228fdc66af54269afa26ab4463042e33785b887c628ba8"
   end
 
   resource "jupyter-core" do
@@ -80,9 +50,44 @@ class AzdataCli < Formula
     sha256 "9fe95f19286cfefaa917656583d020be14e7859c6b0252588391e47db34527de"
   end
 
-  resource "ipython_genutils" do
-    url "https://files.pythonhosted.org/packages/e8/69/fbeffffc05236398ebfcfb512b6d2511c622871dca1746361006da310399/ipython_genutils-0.2.0.tar.gz"
-    sha256 "eb2e116e75ecef9d4d228fdc66af54269afa26ab4463042e33785b887c628ba8"
+  resource "jupyter-client" do
+    url "https://files.pythonhosted.org/packages/19/aa/a4b27bb6cdfe870cf56bc5821e9fa54afd80164dc2344fd47194a987f0e9/jupyter_client-6.1.6.tar.gz"
+    sha256 "b360f8d4638bc577a4656e93f86298db755f915098dc763f6fc05da0c5d7a595"
+  end
+
+  resource "traitlets" do
+    url "https://files.pythonhosted.org/packages/75/b0/43deb021bc943f18f07cbe3dac1d681626a48997b7ffa1e7fb14ef922b21/traitlets-4.3.3.tar.gz"
+    sha256 "d023ee369ddd2763310e4c3eae1ff649689440d4ae59d7485eb4cfbbe3e359f7"
+  end
+
+  resource "prometheus-client" do
+    url "https://files.pythonhosted.org/packages/d4/e4/04c85d441194059e063e866847c04dbba11b9428bee8d3b8d086fb9a8c51/prometheus_client-0.8.0.tar.gz"
+    sha256 "c6e6b706833a6bd1fd51711299edee907857be10ece535126a158f911ee80915"
+  end
+
+  resource "terminado" do
+    url "https://files.pythonhosted.org/packages/13/5b/57e995382718d176aba6168632bd15cf5371a7b1205c83a7e4aae0bc6c2e/terminado-0.8.3.tar.gz"
+    sha256 "4804a774f802306a7d9af7322193c5390f1da0abb429e082a10ef1d46e6fb2c2"
+  end
+
+  resource "tornado" do
+    url "https://files.pythonhosted.org/packages/95/84/119a46d494f008969bf0c775cb2c6b3579d3c4cc1bb1b41a022aa93ee242/tornado-6.0.4.tar.gz"
+    sha256 "0fe2d45ba43b00a41cd73f8be321a44936dc1aba233dee979f17a042b83eb6dc"
+  end
+
+  resource "pyzmq" do
+    url "https://files.pythonhosted.org/packages/86/08/e5fc492317cc9d65b32d161c6014d733e8ab20b5e78e73eca63f53b17004/pyzmq-19.0.1.tar.gz"
+    sha256 "13a5638ab24d628a6ade8f794195e1a1acd573496c3b85af2f1183603b7bf5e0"
+  end
+
+  resource "nbformat" do
+    url "https://files.pythonhosted.org/packages/95/8e/8ffd07ed059a6277fe2f72d1fa411b49a8e512ad62f2ed20b9c2438192dd/nbformat-5.0.7.tar.gz"
+    sha256 "54d4d6354835a936bad7e8182dcd003ca3dc0cedfee5a306090e04854343b340"
+  end
+
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/69/11/a69e2a3c01b324a77d3a7c0570faa372e8448b666300c4117a516f8b1212/jsonschema-3.2.0.tar.gz"
+    sha256 "c8a85b28d377cc7737e46e2d9f2b4f44ee3c0e1deac6bf46ddefc7187d30797a"
   end
 
   resource "notebook" do
@@ -190,14 +195,14 @@ class AzdataCli < Formula
     sha256 "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
   end
 
-  resource "idna" do
-    url "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz"
-    sha256 "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
-  end
-
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz"
     sha256 "25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"
+  end
+
+  resource "idna" do
+    url "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz"
+    sha256 "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
   end
 
   resource "requests" do
@@ -221,8 +226,8 @@ class AzdataCli < Formula
   end
 
   resource "cffi" do
-    url "https://files.pythonhosted.org/packages/54/1d/15eae71ab444bd88a1d69f19592dcf32b9e3166ecf427dd9243ef0d3b7bc/cffi-1.14.1.tar.gz"
-    sha256 "b2a2b0d276a136146e012154baefaea2758ef1f56ae9f4e01c612b0831e0bd2f"
+    url "https://files.pythonhosted.org/packages/05/54/3324b0c46340c31b909fcec598696aaec7ddc8c18a63f2db352562d3354c/cffi-1.14.0.tar.gz"
+    sha256 "2d384f4a127a15ba701207f7639d94106693b6cd64173d6c8988e2c25f3ac2b6"
   end
 
   resource "pycparser" do
@@ -245,14 +250,14 @@ class AzdataCli < Formula
     sha256 "2db72c44b55d0fe1407be8fba35c838ad0d6d3bb81f23007886dc1fc0f459c8d"
   end
 
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/cb/9f/27d4844ac5bf158a33900dbad7985951e2910397998e85712da03ce125f0/Pygments-2.5.2.tar.gz"
-    sha256 "98c8aa5a9f778fcd1026a17361ddaf7330d1b7c62ae97c3bb0ae73e0b9b6b0fe"
-  end
-
   resource "ipython" do
     url "https://files.pythonhosted.org/packages/88/91/666a7fa24bab1396537fcd8e2b287a2d773605ad16020af81036c8c1438c/ipython-7.16.1.tar.gz"
     sha256 "9f4fcb31d3b2c533333893b9172264e4821c1ac91839500f31bd43f2c59b3ccf"
+  end
+
+  resource "python-dateutil" do
+    url "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz"
+    sha256 "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"
   end
 
   resource "QtPy" do
@@ -260,9 +265,9 @@ class AzdataCli < Formula
     sha256 "2db72c44b55d0fe1407be8fba35c838ad0d6d3bb81f23007886dc1fc0f459c8d"
   end
 
-  resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz"
-    sha256 "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"
+  resource "Pygments" do
+    url "https://files.pythonhosted.org/packages/cb/9f/27d4844ac5bf158a33900dbad7985951e2910397998e85712da03ce125f0/Pygments-2.5.2.tar.gz"
+    sha256 "98c8aa5a9f778fcd1026a17361ddaf7330d1b7c62ae97c3bb0ae73e0b9b6b0fe"
   end
 
   resource "qtconsole" do
@@ -288,6 +293,11 @@ class AzdataCli < Formula
   resource "pyodbc" do
     url "https://files.pythonhosted.org/packages/31/14/124da4b15df927c8a9192c44a42523e289e5a815acd437fd5ce5c2cbc515/pyodbc-4.0.28.tar.gz"
     sha256 "510643354c4c687ed96bf7e7cec4d02d6c626ecf3e18696f5a0228dd6d11b769"
+  end
+
+  resource "PyJWT" do
+    url "https://files.pythonhosted.org/packages/2f/38/ff37a24c0243c5f45f5798bd120c0f873eeed073994133c084e1cf13b95c/PyJWT-1.7.1.tar.gz"
+    sha256 "8d59a976fb773f3e6a39c85636357c4f0e242707394cadadd9814f5cbaa20e96"
   end
 
   resource "Pygments" do
@@ -316,8 +326,8 @@ class AzdataCli < Formula
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/b9/27/a9007a575c8a8e80c22144fec5df3943fd304dfa791bed44a0130e984803/pip-20.2.tar.gz"
-    sha256 "912935eb20ea6a3b5ed5810dde9754fde5563f5ca9be44a8a6e5da806ade970b"
+    url "https://files.pythonhosted.org/packages/08/25/f204a6138dade2f6757b4ae99bc3994aac28a5602c97ddb2a35e0e22fbc4/pip-20.1.1.tar.gz"
+    sha256 "27f8dc29387dd83249e06e681ce087e6061826582198a425085e0bf4c1cf3a55"
   end
 
   resource "pickleshare" do
@@ -345,6 +355,11 @@ class AzdataCli < Formula
     sha256 "4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"
   end
 
+  resource "entrypoints" do
+    url "https://files.pythonhosted.org/packages/b4/ef/063484f1f9ba3081e920ec9972c96664e2edb9fdc3d8669b0e3b8fc0ad7c/entrypoints-0.3.tar.gz"
+    sha256 "c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"
+  end
+
   resource "mistune" do
     url "https://files.pythonhosted.org/packages/2d/a4/509f6e7783ddd35482feda27bc7f72e65b5e7dc910eca4ab2164daf9c577/mistune-0.8.4.tar.gz"
     sha256 "59a3429db53c50b5c6bcc8a07f8848cb00d7dc8bdb431a4ab41920d201d4756e"
@@ -360,14 +375,9 @@ class AzdataCli < Formula
     sha256 "3c4c520fdb9db59ef139915a5db79f8b51bc2a7257ea0389f30c846883430a4b"
   end
 
-  resource "entrypoints" do
-    url "https://files.pythonhosted.org/packages/b4/ef/063484f1f9ba3081e920ec9972c96664e2edb9fdc3d8669b0e3b8fc0ad7c/entrypoints-0.3.tar.gz"
-    sha256 "c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"
-  end
-
-  resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/69/11/a69e2a3c01b324a77d3a7c0570faa372e8448b666300c4117a516f8b1212/jsonschema-3.2.0.tar.gz"
-    sha256 "c8a85b28d377cc7737e46e2d9f2b4f44ee3c0e1deac6bf46ddefc7187d30797a"
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/98/c3/2c227e66b5e896e15ccdae2e00bbc69aa46e9a8ce8869cc5fa96310bf612/attrs-19.3.0.tar.gz"
+    sha256 "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"
   end
 
   resource "importlib-metadata" do
@@ -375,14 +385,24 @@ class AzdataCli < Formula
     sha256 "90bb658cdbbf6d1735b6341ce708fc7024a3e14e99ffdc5783edea9f9b077f83"
   end
 
-  resource "attrs" do
-    url "https://files.pythonhosted.org/packages/98/c3/2c227e66b5e896e15ccdae2e00bbc69aa46e9a8ce8869cc5fa96310bf612/attrs-19.3.0.tar.gz"
-    sha256 "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"
+  resource "configobj" do
+    url "https://files.pythonhosted.org/packages/64/61/079eb60459c44929e684fa7d9e2fdca403f67d64dd9dbac27296be2e0fab/configobj-5.0.6.tar.gz"
+    sha256 "a2f5650770e1c87fb335af19a9b7eb73fc05ccf22144eb68db7d00cd2bcb0902"
   end
 
-  resource "argparse" do
-    url "https://files.pythonhosted.org/packages/45/0b/c5cdf94e911872072b9bd17a6412145c7cda88934f241dcc8a0d11b10c5c/argparse-1.1.zip"
-    sha256 "ee6da1aaad8b08a74a33eb82264b1a2bf12a7d5aefc7e9d7d40a8f8fa9912e62"
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/27/6f/be940c8b1f1d69daceeb0032fee6c34d7bd70e3e649ccac0951500b4720e/click-7.1.2.tar.gz"
+    sha256 "d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"
+  end
+
+  resource "humanize" do
+    url "https://files.pythonhosted.org/packages/9d/b3/dc7e23ed4311bbc95364c6c4f72140f0a69abaa63b6410e7983d259bf805/humanize-2.5.0.tar.gz"
+    sha256 "8a68bd9bccb899fd9bfb1e6d96c1e84e4475551cc9a5b5bdbd69b9b1cfd19c80"
+  end
+
+  resource "future" do
+    url "https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz"
+    sha256 "b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
   end
 
   resource "backports.csv" do
@@ -395,9 +415,9 @@ class AzdataCli < Formula
     sha256 "eaa887b46ef448c8864ba460cce4fa26866e45e337dc32a2b4741ccb033c42f1"
   end
 
-  resource "click" do
-    url "https://files.pythonhosted.org/packages/27/6f/be940c8b1f1d69daceeb0032fee6c34d7bd70e3e649ccac0951500b4720e/click-7.1.2.tar.gz"
-    sha256 "d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"
+  resource "argparse" do
+    url "https://files.pythonhosted.org/packages/45/0b/c5cdf94e911872072b9bd17a6412145c7cda88934f241dcc8a0d11b10c5c/argparse-1.1.zip"
+    sha256 "ee6da1aaad8b08a74a33eb82264b1a2bf12a7d5aefc7e9d7d40a8f8fa9912e62"
   end
 
   resource "applicationinsights" do
@@ -405,24 +425,14 @@ class AzdataCli < Formula
     sha256 "30a11aafacea34f8b160fbdc35254c9029c7e325267874e3c68f6bdbcd6ed2c3"
   end
 
-  resource "future" do
-    url "https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz"
-    sha256 "b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
-  end
-
-  resource "configobj" do
-    url "https://files.pythonhosted.org/packages/64/61/079eb60459c44929e684fa7d9e2fdca403f67d64dd9dbac27296be2e0fab/configobj-5.0.6.tar.gz"
-    sha256 "a2f5650770e1c87fb335af19a9b7eb73fc05ccf22144eb68db7d00cd2bcb0902"
-  end
-
-  resource "humanize" do
-    url "https://files.pythonhosted.org/packages/9d/b3/dc7e23ed4311bbc95364c6c4f72140f0a69abaa63b6410e7983d259bf805/humanize-2.5.0.tar.gz"
-    sha256 "8a68bd9bccb899fd9bfb1e6d96c1e84e4475551cc9a5b5bdbd69b9b1cfd19c80"
-  end
-
   resource "mssql-cli" do
     url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/15.0.2070/mssql-cli-0.17.0.tar.gz"
     sha256 "c71afd3dec1782f21a2a6c7df41565d5608dade6772bc0aa92fd87644e4c8ae2"
+  end
+
+  resource "msal" do
+    url "https://files.pythonhosted.org/packages/4a/e7/2f7b24e21f5c9a1a4edd9bc49240325942554771f3e137643c6c699a89a8/msal-1.3.0.tar.gz"
+    sha256 "5442a3a9d006506e653d3c4daff40538bdf067bf07b6b73b32d1b231d5e77a92"
   end
 
   resource "Markdown" do
@@ -456,8 +466,8 @@ class AzdataCli < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/71/e5/a0017ceb8a096e2197360452299fef4c70bedeb840b1af73170c5c9d843d/google-auth-1.20.0.tar.gz"
-    sha256 "c6e9735a2ee829a75b546702e460489db5cc35567a27fabd70b7c459f11efd58"
+    url "https://files.pythonhosted.org/packages/bd/fe/163ecab1eb07dd208a923e0d9bc36c26ac72fc8a4c0b182a193f83ba3679/google-auth-1.19.2.tar.gz"
+    sha256 "f404448f3d3c91944b1d907427d4a0c48f465898e9dbacf1bdebf95c5fe03273"
   end
 
   resource "kubernetes" do
@@ -465,14 +475,14 @@ class AzdataCli < Formula
     sha256 "eb95331512c2e9206c85b62788f82cc2d51cfb96420d4ef18f007ec1b9d87f0a"
   end
 
-  resource "colorama" do
-    url "https://files.pythonhosted.org/packages/82/75/f2a4c0c94c85e2693c229142eb448840fba0f9230111faa889d1f541d12d/colorama-0.4.3.tar.gz"
-    sha256 "e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"
-  end
-
   resource "argcomplete" do
     url "https://files.pythonhosted.org/packages/df/a0/3544d453e6b80792452d71fdf45aac532daf1c2b2d7fc6cb712e1c3daf11/argcomplete-1.12.0.tar.gz"
     sha256 "2fbe5ed09fd2c1d727d4199feca96569a5b50d44c71b16da9c742201f7cc295c"
+  end
+
+  resource "colorama" do
+    url "https://files.pythonhosted.org/packages/82/75/f2a4c0c94c85e2693c229142eb448840fba0f9230111faa889d1f541d12d/colorama-0.4.3.tar.gz"
+    sha256 "e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"
   end
 
   resource "jmespath" do
@@ -485,14 +495,14 @@ class AzdataCli < Formula
     sha256 "b1ac92669641b902e1aef97138666a21b8852f65d83cbde03eb9ddebf82ce121"
   end
 
-  resource "ipywidgets" do
-    url "https://files.pythonhosted.org/packages/a3/74/e92a731b6afbf493b1fb898d0af8d0cfcf23e3f5a43ba139bf40ea426bbe/ipywidgets-7.5.1.tar.gz"
-    sha256 "e945f6e02854a74994c596d9db83444a1850c01648f1574adf144fbbabe05c97"
-  end
-
   resource "jupyter-console" do
     url "https://files.pythonhosted.org/packages/92/c8/b7e768a3dec19b09d8ad5296a479e03c19a741a1bb4abab27c09236b8562/jupyter_console-6.0.0.tar.gz"
     sha256 "308ce876354924fb6c540b41d5d6d08acfc946984bf0c97777c1ddcb42e0b2f5"
+  end
+
+  resource "ipywidgets" do
+    url "https://files.pythonhosted.org/packages/a3/74/e92a731b6afbf493b1fb898d0af8d0cfcf23e3f5a43ba139bf40ea426bbe/ipywidgets-7.5.1.tar.gz"
+    sha256 "e945f6e02854a74994c596d9db83444a1850c01648f1574adf144fbbabe05c97"
   end
 
   resource "jupyter" do
@@ -500,14 +510,14 @@ class AzdataCli < Formula
     sha256 "d9dc4b3318f310e34c82951ea5d6683f67bed7def4b259fafbfe4f1beb1d8e5f"
   end
 
-  resource "backcall" do
-    url "https://files.pythonhosted.org/packages/a2/40/764a663805d84deee23043e1426a9175567db89c8b3287b5c2ad9f71aa93/backcall-0.2.0.tar.gz"
-    sha256 "5cbdbf27be5e7cfadb448baf0aa95508f91f2bbc6c6437cd9cd06e2a4c215e1e"
-  end
-
   resource "jedi" do
     url "https://files.pythonhosted.org/packages/39/67/50d1653038dafe06ca2cc55c4598c5f8318d519c12a7a288d7826280ee22/jedi-0.17.2.tar.gz"
     sha256 "86ed7d9b750603e4ba582ea8edc678657fb4007894a12bcf6f4bb97892f31d20"
+  end
+
+  resource "backcall" do
+    url "https://files.pythonhosted.org/packages/a2/40/764a663805d84deee23043e1426a9175567db89c8b3287b5c2ad9f71aa93/backcall-0.2.0.tar.gz"
+    sha256 "5cbdbf27be5e7cfadb448baf0aa95508f91f2bbc6c6437cd9cd06e2a4c215e1e"
   end
 
   resource "jsonpointer" do
