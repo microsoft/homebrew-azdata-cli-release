@@ -12,8 +12,7 @@ class AzdataCli < Formula
 
   bottle do
     root_url "https://github.com/microsoft/homebrew-azdata-cli-release/releases/download/20.3.4"
-    cellar :any
-    sha256 "8c60030cf12c73b8de3bb69bca22bef6d2717d0d2125826b19274ca56eb95245" => :catalina
+    sha256 cellar: :any, catalina: "8c60030cf12c73b8de3bb69bca22bef6d2717d0d2125826b19274ca56eb95245"
   end
 
   depends_on "freetds"
